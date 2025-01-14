@@ -1,11 +1,22 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import rehypeMermaid from "rehype-mermaid";
+import remarkPlantUML from "@akebifiky/remark-simple-plantuml";
+import astroExpressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://tipitaka-md.github.io",
   integrations: [
+    astroExpressiveCode({
+      shiki: {
+        // Allow using the alias 'mjs' for the 'javascript' language
+        langAlias: {
+          plantuml: "txt",
+        },
+      },
+    }),
     starlight({
       title: "Tipitaka",
       social: {
@@ -32,17 +43,21 @@ export default defineConfig({
       logo: {
         src: "./src/assets/rosely.svg",
       },
-	  defaultLocale: 'root',
+      defaultLocale: "root",
       locales: {
         root: {
-          label: 'Pāḷi',
-          lang: 'pli',
+          label: "English",
+          lang: "en",
         },
-        'en': {
-          label: 'English',
-          lang: 'en',
+        pli: {
+          label: "Pāḷi",
+          lang: "pli",
         },
       },
     }),
   ],
+  markdown: {
+    remarkPlugins: [remarkPlantUML],
+    rehypePlugins: [rehypeMermaid],
+  },
 });
