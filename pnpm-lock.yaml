@@ -11,9 +11,18 @@ dependencies:
   '@astrojs/starlight':
     specifier: ^0.31.0
     version: 0.31.0(astro@5.1.6)
+  '@fontsource/noto-sans':
+    specifier: ^5.1.1
+    version: 5.1.1
+  add:
+    specifier: ^2.0.6
+    version: 2.0.6
   astro:
     specifier: ^5.1.6
     version: 5.1.6(typescript@5.7.3)
+  pnpm:
+    specifier: ^9.15.4
+    version: 9.15.4
   sharp:
     specifier: ^0.33.5
     version: 0.33.5
@@ -749,6 +758,10 @@ packages:
       '@expressive-code/core': 0.40.0
     dev: false
 
+  /@fontsource/noto-sans@5.1.1:
+    resolution: {integrity: sha512-WesuII3BzvzVr0JqYIgnEeJPwXvpFAo9tNCMH1AqoLSCdStKJugMaIcVJ/sT+Pw9ytIlUO3ccbqbe+BhhsXm9g==}
+    dev: false
+
   /@img/sharp-darwin-arm64@0.33.5:
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -1407,6 +1420,10 @@ packages:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: false
+
+  /add@2.0.6:
+    resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
     dev: false
 
   /ajv@8.17.1:
@@ -3358,6 +3375,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: false
+
+  /pnpm@9.15.4:
+    resolution: {integrity: sha512-stwg4vxys+GISEWbNzWaMgZGY+VielHkx0ssKd2OjgSRSDw6u0B4nP1Xi/Ni+2uoJhsF8Dh9dnku1uI+o7G2oA==}
+    engines: {node: '>=18.12'}
+    hasBin: true
     dev: false
 
   /postcss-nested@6.2.0(postcss@8.5.0):
