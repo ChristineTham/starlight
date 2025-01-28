@@ -7,7 +7,7 @@ import astroExpressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://tipitaka-md.github.io",
+  site: "https://christinetham.github.io/starlight",
   integrations: [
     astroExpressiveCode({
       shiki: {
