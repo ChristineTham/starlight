@@ -1,6 +1,6 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
 import rehypeMermaid from "rehype-mermaid";
 import remarkPlantUML from "@akebifiky/remark-simple-plantuml";
 import astroExpressiveCode from "astro-expressive-code";
@@ -19,7 +19,7 @@ export default defineConfig({
       },
     }),
     starlight({
-      title: "Tipitaka",
+      title: "Starlight Template",
       social: {
         github: "https://github.com/ChristineTham/starlight",
       },
