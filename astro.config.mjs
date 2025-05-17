@@ -3,26 +3,21 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import rehypeMermaid from "rehype-mermaid";
 import remarkPlantUML from "@akebifiky/remark-simple-plantuml";
-import astroExpressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://christinetham.github.io",
-  base: "starlight",
+  site: "https://christinetham.github.io/starlight",
+  // base: "starlight",
   integrations: [
-    astroExpressiveCode({
-      shiki: {
-        // Allow using the alias 'mjs' for the 'javascript' language
-        langAlias: {
-          plantuml: "txt",
-        },
-      },
-    }),
     starlight({
       title: "Starlight Template",
-      social: {
-        github: "https://github.com/ChristineTham/starlight",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/ChristineTham/starlight",
+        },
+      ],
       sidebar: [
         {
           label: "Guides",
@@ -44,20 +39,24 @@ export default defineConfig({
       logo: {
         src: "./src/assets/rosely.svg",
       },
-      defaultLocale: "root",
-      locales: {
-        root: {
-          label: "English",
-          lang: "en",
-        },
-        pli: {
-          label: "Pāḷi",
-          lang: "pli",
-        },
-      },
+      // defaultLocale: "root",
+      // locales: {
+      //   root: {
+      //     label: "English",
+      //     lang: "en",
+      //   },
+      //   pli: {
+      //     label: "Pāḷi",
+      //     lang: "pli",
+      //   },
+      // },
     }),
   ],
   markdown: {
+    syntaxHighlight: {
+      type: "shiki",
+      excludeLangs: ["plantuml", "mermaid", "math"],
+    },
     remarkPlugins: [remarkPlantUML],
     rehypePlugins: [rehypeMermaid],
   },
