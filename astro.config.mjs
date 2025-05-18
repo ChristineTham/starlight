@@ -7,7 +7,7 @@ import remarkPlantUML from "@akebifiky/remark-simple-plantuml";
 // https://astro.build/config
 export default defineConfig({
   site: "https://christinetham.github.io/starlight",
-  // base: "starlight",
+  base: "/starlight",
   integrations: [
     starlight({
       title: "Starlight Template",

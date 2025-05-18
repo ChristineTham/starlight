@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "clean": "rm -rf .astro dist node_modules",
     "refresh": "npx @astrojs/upgrade; pnpm up -L"
   },
   "dependencies": {
