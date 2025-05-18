@@ -2,7 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import rehypeMermaid from "rehype-mermaid";
-import remarkPlantUML from "@akebifiky/remark-simple-plantuml";
+import plantUML from "@akebifiky/remark-simple-plantuml";
 
 // https://astro.build/config
 export default defineConfig({
@@ -57,7 +57,9 @@ export default defineConfig({
       type: "shiki",
       excludeLangs: ["plantuml", "mermaid", "math"],
     },
-    remarkPlugins: [remarkPlantUML],
-    rehypePlugins: [rehypeMermaid],
+    remarkPlugins: [
+      [plantUML, { baseUrl: "https://www.plantuml.com/plantuml/svg" }],
+    ],
+    rehypePlugins: [[rehypeMermaid, { dark: true, strategy: "img-svg" }]],
   },
 });
