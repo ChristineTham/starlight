@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import plantuml from "astro-plantuml";
 import mermaid from "astro-mermaid";
+import d2 from "astro-d2";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
   integrations: [
     plantuml(),
     mermaid(),
+    d2(),
     starlight({
       title: "Starlight Template",
       social: [

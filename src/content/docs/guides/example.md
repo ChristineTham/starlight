@@ -37,6 +37,13 @@ Alice <-- Bob: Another authentication Response
 @enduml
 ```
 
+## D2
+
+```d2
+direction: right
+installation -> configuration
+```
+
 ## Further reading
 
 - Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework

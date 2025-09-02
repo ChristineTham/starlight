@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(typescript@5.9.2)
       '@astrojs/starlight':
         specifier: ^0.35.2
-        version: 0.35.2(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
+        version: 0.35.2(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
       '@fontsource/noto-sans':
         specifier: ^5.2.7
         version: 5.2.7
@@ -22,13 +22,16 @@ importers:
         version: 2.0.6
       astro:
         specifier: ^5.13.5
-        version: 5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+        version: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      astro-d2:
+        specifier: ^0.8.0
+        version: 0.8.0(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
       astro-mermaid:
         specifier: ^1.0.4
-        version: 1.0.4(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))(mermaid@11.10.1)
+        version: 1.0.4(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))(mermaid@11.10.1)
       astro-plantuml:
         specifier: ^0.1.4
-        version: 0.1.4(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
+        version: 0.1.4(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
       mermaid:
         specifier: ^11.10.1
         version: 11.10.1
@@ -1001,6 +1004,12 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
+  astro-d2@0.8.0:
+    resolution: {integrity: sha512-vs1crOjTmYeQg+kHUymB8AhcmFRZyiQBuK1bsuMoTbX1upX3ljhny8DdvOWoiEVUBQAwlUojjwO5bB8tRo8hCw==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      astro: '>=5.0.0'
+
   astro-expressive-code@0.41.3:
     resolution: {integrity: sha512-u+zHMqo/QNLE2eqYRCrK3+XMlKakv33Bzuz+56V1gs8H0y6TZ0hIi3VNbIxeTn51NLn+mJfUV/A0kMNfE4rANw==}
     peerDependencies:
@@ -1430,6 +1439,9 @@ packages:
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
+
+  encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
 
   entities@6.0.1:
     resolution: {integrity: sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==}
@@ -2894,12 +2906,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.4(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))':
+  '@astrojs/mdx@4.3.4(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.6
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      astro: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2923,17 +2935,17 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.76
 
-  '@astrojs/starlight@0.35.2(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))':
+  '@astrojs/starlight@0.35.2(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.6
-      '@astrojs/mdx': 4.3.4(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
+      '@astrojs/mdx': 4.3.4(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
       '@astrojs/sitemap': 3.5.1
       '@pagefind/default-ui': 1.4.0
       '@types/hast': 3.0.4
       '@types/js-yaml': 4.0.9
       '@types/mdast': 4.0.4
-      astro: 5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
-      astro-expressive-code: 0.41.3(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
+      astro: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      astro-expressive-code: 0.41.3(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))
       bcp-47: 2.1.0
       hast-util-from-html: 2.0.3
       hast-util-select: 6.0.4
@@ -2989,10 +3001,10 @@ snapshots:
 
   '@braintree/sanitize-url@7.1.1': {}
 
-  '@capsizecss/unpack@2.4.0':
+  '@capsizecss/unpack@2.4.0(encoding@0.1.13)':
     dependencies:
       blob-to-buffer: 1.2.9
-      cross-fetch: 3.2.0
+      cross-fetch: 3.2.0(encoding@0.1.13)
       fontkit: 2.0.4
     transitivePeerDependencies:
       - encoding
@@ -3773,33 +3785,40 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.41.3(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)):
+  astro-d2@0.8.0(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)):
     dependencies:
-      astro: 5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      astro: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      hast-util-from-html: 2.0.3
+      hast-util-to-html: 9.0.5
+      unist-util-visit: 5.0.0
+
+  astro-expressive-code@0.41.3(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)):
+    dependencies:
+      astro: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
       rehype-expressive-code: 0.41.3
 
-  astro-mermaid@1.0.4(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))(mermaid@11.10.1):
+  astro-mermaid@1.0.4(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1))(mermaid@11.10.1):
     dependencies:
-      astro: 5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      astro: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
       mdast-util-to-string: 4.0.0
       mermaid: 11.10.1
       unist-util-visit: 5.0.0
 
-  astro-plantuml@0.1.4(astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)):
+  astro-plantuml@0.1.4(astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)):
     dependencies:
       '@types/axios': 0.14.4
-      astro: 5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
+      astro: 5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1)
       axios: 1.11.0
     transitivePeerDependencies:
       - debug
 
-  astro@5.13.5(@types/node@24.3.0)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1):
+  astro@5.13.5(@types/node@24.3.0)(encoding@0.1.13)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.2
       '@astrojs/markdown-remark': 6.3.6
       '@astrojs/telemetry': 3.3.0
-      '@capsizecss/unpack': 2.4.0
+      '@capsizecss/unpack': 2.4.0(encoding@0.1.13)
       '@oslojs/encoding': 1.1.0
       '@rollup/pluginutils': 5.2.0(rollup@4.50.0)
       acorn: 8.15.0
@@ -4041,9 +4060,9 @@ snapshots:
     dependencies:
       layout-base: 2.0.1
 
-  cross-fetch@3.2.0:
+  cross-fetch@3.2.0(encoding@0.1.13):
     dependencies:
-      node-fetch: 2.7.0
+      node-fetch: 2.7.0(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
 
@@ -4306,6 +4325,11 @@ snapshots:
   emoji-regex@10.5.0: {}
 
   emoji-regex@8.0.0: {}
+
+  encoding@0.1.13:
+    dependencies:
+      iconv-lite: 0.6.3
+    optional: true
 
   entities@6.0.1: {}
 
@@ -5373,9 +5397,11 @@ snapshots:
 
   node-fetch-native@1.6.7: {}
 
-  node-fetch@2.7.0:
+  node-fetch@2.7.0(encoding@0.1.13):
     dependencies:
       whatwg-url: 5.0.0
+    optionalDependencies:
+      encoding: 0.1.13
 
   node-mock-http@1.0.2: {}
 
