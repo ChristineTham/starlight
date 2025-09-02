@@ -1,14 +1,16 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import rehypeMermaid from "rehype-mermaid";
-import plantUML from "@akebifiky/remark-simple-plantuml";
+import plantuml from "astro-plantuml";
+import mermaid from "astro-mermaid";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://christinetham.github.io/starlight",
   base: "/starlight",
   integrations: [
+    plantuml(),
+    mermaid(),
     starlight({
       title: "Starlight Template",
       social: [
@@ -52,14 +54,4 @@ export default defineConfig({
       // },
     }),
   ],
-  markdown: {
-    syntaxHighlight: {
-      type: "shiki",
-      excludeLangs: ["plantuml", "mermaid", "math"],
-    },
-    remarkPlugins: [
-      [plantUML, { baseUrl: "https://www.plantuml.com/plantuml/svg" }],
-    ],
-    rehypePlugins: [[rehypeMermaid, { dark: true, strategy: "img-svg" }]],
-  },
 });

@@ -2,7 +2,7 @@
   "name": "starlight",
   "description": "Test project for Astro Starlight",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,20 +10,19 @@
     "preview": "astro preview",
     "astro": "astro",
     "clean": "rm -rf .astro dist node_modules",
-    "refresh": "npx @astrojs/upgrade; pnpm up -L"
+    "refresh": "pnpm dlx @astrojs/upgrade; pnpm up -L"
   },
   "dependencies": {
-    "@akebifiky/remark-simple-plantuml": "^1.0.2",
     "@astrojs/check": "^0.9.4",
-    "@astrojs/starlight": "^0.34.3",
+    "@astrojs/starlight": "^0.35.2",
     "@fontsource/noto-sans": "^5.2.7",
     "add": "^2.0.6",
-    "astro": "^5.7.13",
-    "astro-expressive-code": "^0.41.2",
-    "playwright": "^1.52.0",
-    "rehype-mermaid": "^3.0.0",
-    "sharp": "^0.34.1",
-    "typescript": "^5.8.3"
+    "astro": "^5.13.5",
+    "astro-mermaid": "^1.0.4",
+    "astro-plantuml": "^0.1.4",
+    "mermaid": "^11.10.1",
+    "sharp": "^0.34.3",
+    "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
