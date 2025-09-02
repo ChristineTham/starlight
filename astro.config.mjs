@@ -5,6 +5,8 @@ import mermaid from "astro-mermaid";
 import d2 from "astro-d2";
 import starlight from "@astrojs/starlight";
 import starlightGitHubAlerts from "starlight-github-alerts";
+import starlightSiteGraph from "starlight-site-graph";
+import starlightImageZoom from "starlight-image-zoom";
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,13 +40,19 @@ export default defineConfig({
       ],
       customCss: [
         "./src/styles/custom.css",
+        "@fontsource/noto-sans-mono/400.css",
+        "@fontsource/noto-sans-mono/600.css",
         "@fontsource/noto-sans/400.css",
         "@fontsource/noto-sans/600.css",
       ],
       logo: {
         src: "./src/assets/rosely.svg",
       },
-      plugins: [starlightGitHubAlerts()],
+      plugins: [
+        starlightGitHubAlerts(),
+        starlightSiteGraph(),
+        starlightImageZoom(),
+      ],
       // defaultLocale: "root",
       // locales: {
       //   root: {

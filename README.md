@@ -1,12 +1,24 @@
-# Starlight
+# Starlight Template
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```sh
-pnpm create astro@latest -- --template starlight
-```
+Astro Starlight starter template for my projects.
 
-Test project for playing around with Starlight
+Integrates the following plugins:
+
+- [astro-mermaid](https://github.com/joesaby/astro-mermaid)
+- [astro-plantuml](https://github.com/joesaby/astro-plantuml)
+- [astro-d2](https://github.com/HiDeoo/astro-d2)
+- [Starlight Github Alerts](https://github.com/HiDeoo/starlight-github-alerts)
+- [Starlight Site Graph](https://github.com/Fevol/starlight-site-graph)
+- [Starlight Image Zoom](https://github.com/HiDeoo/starlight-image-zoom)
+
+Has the following customisations:
+
+- Default font [Google Noto Sans](https://fonts.google.com/noto) via [Fontsource](https://fontsource.org/)
+- Monospace font Google Noto Sans Mono
+- Custom colours based on [Rosely](https://rosely.hellotham.com)
+- Custom favicon
 
 ## 🚀 Project Structure
 
@@ -37,13 +49,10 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm dev`                 | Starts local dev server at `localhost:4321`      |
+| `pnpm build`               | Build your production site to `./dist/`          |
+| `pnpm preview`             | Preview your build locally, before deploying     |
+| `pnpm refresh`             | Updates Starlight and dependencies               |
+| `pnpm astro ...`           | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help`     | Get help using the Astro CLI                     |
