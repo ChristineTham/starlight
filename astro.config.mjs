@@ -1,9 +1,10 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import starlight from "@astrojs/starlight";
 import plantuml from "astro-plantuml";
 import mermaid from "astro-mermaid";
 import d2 from "astro-d2";
+import starlight from "@astrojs/starlight";
+import starlightGitHubAlerts from "starlight-github-alerts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,6 +44,7 @@ export default defineConfig({
       logo: {
         src: "./src/assets/rosely.svg",
       },
+      plugins: [starlightGitHubAlerts()],
       // defaultLocale: "root",
       // locales: {
       //   root: {
