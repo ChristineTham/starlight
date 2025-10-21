@@ -53,6 +53,13 @@ export default defineConfig({
         starlightSiteGraph(),
         starlightImageZoom(),
       ],
+      expressiveCode: {
+        shiki: {
+          langAlias: {
+            d2: "txt",
+          },
+        },
+      },
       // defaultLocale: "root",
       // locales: {
       //   root: {
